@@ -29,6 +29,7 @@ import org.ossreviewtoolkit.model.Identifier
 import org.ossreviewtoolkit.model.LicenseSource
 import org.ossreviewtoolkit.model.Severity
 import org.ossreviewtoolkit.utils.spdx.toSpdx
+import org.ossreviewtoolkit.utils.test.ortResult
 
 class EvaluatorTest : WordSpec() {
     init {
@@ -115,6 +116,45 @@ class EvaluatorTest : WordSpec() {
                     message shouldBe "message 2"
                     howToFix shouldBe "how to fix 2"
                 }
+            }
+        }
+
+        "OSADL compliance rules" should {
+            "return no violation for compatible licenses" {
+                val compatibleOrtResult = ortResult {
+                    pkg("Maven:group:name:1") {
+                        license = "AGPL-3.0-only"
+
+                        pkg("Maven:group:name:2") {
+                            license = "AGPL-3.0-or-later"
+                        }
+                    }
+                }
+                val script = javaClass.getResource("/osadl/osadl.rules.kts").readText()
+
+                val result = Evaluator(compatibleOrtResult).run(script)
+
+                result.violations should beEmpty()
+            }
+
+            "return a violation for incompatible licenses" {
+                val incompatibleOrtResult = ortResult {
+                    pkg("Maven:group:name:1") {
+                        license = "AGPL-3.0-or-later"
+
+                        pkg("Maven:group:name:2") {
+                            license = "AGPL-3.0-only"
+                        }
+                    }
+                }
+                val script = javaClass.getResource("/osadl/osadl.rules.kts").readText()
+
+                val result = Evaluator(incompatibleOrtResult).run(script)
+
+                result.violations should haveSize(1)
+                result.violations.first().message shouldBe "The outbound license 'AGPL-3.0-or-later' of package " +
+                        "'Maven:group:name:1' is incompatible with the inbound license 'AGPL-3.0-only' of its " +
+                        "dependency 'Maven:group:name:2'."
             }
         }
     }
