@@ -30,10 +30,10 @@ enum class Compatibility {
     companion object {
         fun fromString(value: String): Compatibility =
             when (value) {
-                "" -> INHERENT
+                "", "Same" -> INHERENT
                 "Yes" -> YES
                 "No" -> NO
-                "?", "Dep." -> UNKNOWN
+                "?", "Unknown", "Check dependency", "Dep." -> UNKNOWN
                 else -> throw IllegalArgumentException("Unhandled compatibility '$value' found.")
             }
     }
