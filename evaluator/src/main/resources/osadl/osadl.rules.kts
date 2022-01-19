@@ -21,6 +21,9 @@
 //
 // $ ort evaluate -i scanner/src/funTest/assets/dummy-expected-output-for-analyzer-result.yml --rules-resource /osadl/osadl.rules.kts
 
+import com.fasterxml.jackson.annotation.JsonCreator
+import com.fasterxml.jackson.module.kotlin.readValue
+
 enum class Compatibility {
     INHERENT,
     YES,
@@ -28,6 +31,8 @@ enum class Compatibility {
     UNKNOWN;
 
     companion object {
+        @JsonCreator(mode = JsonCreator.Mode.DELEGATING)
+        @JvmStatic
         fun fromString(value: String): Compatibility =
             when (value) {
                 "", "Same" -> INHERENT
@@ -39,27 +44,8 @@ enum class Compatibility {
     }
 }
 
-val matrix = mutableMapOf<Pair<String, String>, Compatibility>()
-
-javaClass.getResourceAsStream("/osadl/osadl-matrix.csv").bufferedReader().useLines { lines ->
-    val rowIterator = lines.iterator()
-
-    // The first row contains the header with names of the inbound licenses.
-    val columnHeaders = rowIterator.next().split(',')
-        // Drop the surrounding "Compatibility*" cells from the header row.
-        .drop(1).dropLast(1)
-
-    while (rowIterator.hasNext()) {
-        val cellIterator = rowIterator.next().split(',').iterator()
-
-        // The first column contains the header with names of the outbound licenses.
-        val inbound = cellIterator.next()
-
-        columnHeaders.forEach { outbound ->
-            val value = cellIterator.next()
-            matrix[inbound to outbound] = Compatibility.fromString(value)
-        }
-    }
+val matrix: Map<String, Map<String, Compatibility>> = javaClass.getResourceAsStream("/osadl/osadl-matrix.json").use {
+    jsonMapper.readValue(it)
 }
 
 fun PackageRule.LicenseRule.isOsadlMatrixNonCompliant(inbound: String) =
@@ -68,7 +54,7 @@ fun PackageRule.LicenseRule.isOsadlMatrixNonCompliant(inbound: String) =
 
         override fun matches(): Boolean {
             val outbound = license.toString()
-            return matrix[inbound to outbound] == Compatibility.NO
+            return matrix.getValue(inbound).getValue(outbound) == Compatibility.NO
         }
     }
 
