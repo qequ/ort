@@ -97,33 +97,26 @@ private val NOASSERTION_LICENSE_REFS = listOf(
 )
 
 /**
- * Generate a summary from the given raw ScanCode [result], using [startTime] and [endTime] metadata. From the
- * [scanPath] the package verification code is generated. If [parseExpressions] is true, license findings are preferably
- * parsed as license expressions.
+ * Generate a summary from the given raw ScanCode [result]. From the [scanPath] the package verification code is
+ * generated. If [parseExpressions] is true, license findings are preferably parsed as license expressions.
  */
 internal fun generateSummary(
-    startTime: Instant,
-    endTime: Instant,
     scanPath: File,
     result: JsonNode,
     parseExpressions: Boolean = true
 ) =
     generateSummary(
-        startTime,
-        endTime,
         calculatePackageVerificationCode(scanPath),
         result,
         parseExpressions
     )
 
 /**
- * Generate a summary from the given raw ScanCode [result], using [startTime], [endTime], and [verificationCode]
- * metadata. This variant can be used if the result is not read from a local file. If [parseExpressions] is true,
- * license findings are preferably parsed as license expressions.
+ * Generate a summary from the given raw ScanCode [result] using [verificationCode] metadata. This variant can be used
+ * if the result is not read from a local file. If [parseExpressions] is true, license findings are preferably parsed as
+ * license expressions.
  */
 internal fun generateSummary(
-    startTime: Instant,
-    endTime: Instant,
     verificationCode: String,
     result: JsonNode,
     parseExpressions: Boolean = true
