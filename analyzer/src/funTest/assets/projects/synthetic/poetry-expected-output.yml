@@ -1,0 +1,772 @@
+---
+repository:
+  vcs:
+    type: ""
+    url: ""
+    revision: ""
+    path: ""
+  vcs_processed:
+    type: ""
+    url: ""
+    revision: ""
+    path: ""
+  config: {}
+analyzer:
+  start_time: "2022-06-10T14:09:22.943757Z"
+  end_time: "2022-06-10T14:09:38.725029Z"
+  environment:
+    ort_version: "f93bf6e73d"
+    java_version: "11.0.15"
+    os: "Linux"
+    processors: 8
+    max_memory: 3672113152
+    variables:
+      SHELL: "/bin/bash"
+      TERM: "xterm-256color"
+    tool_versions:
+      Poetry: "Poetry version 1.1.13"
+  config:
+    allow_dynamic_versions: false
+  result:
+    projects:
+    - id: "Poetry::requirements-from-poetry.txt:"
+      definition_file_path: ""
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      homepage_url: ""
+      scope_names:
+      - "install"
+    packages:
+    - package:
+        id: "PyPI::backports-zoneinfo:0.2.1"
+        purl: "pkg:pypi/backports-zoneinfo@0.2.1"
+        authors:
+        - "Python Software Foundation"
+        declared_licenses:
+        - "Apache Software License"
+        - "Apache-2.0"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache Software License: "Apache-2.0"
+        description: "Backport of the standard library zoneinfo module"
+        homepage_url: "https://github.com/pganssle/zoneinfo"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/33/1c/9357061860f5d3a09e1877aa4cf7c004c55eec40a1036761144ef24d8a1d/backports.zoneinfo-0.2.1-cp36-cp36m-macosx_10_14_x86_64.whl"
+          hash:
+            value: "996b2685962e70970bad27892e61e543"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/ad/85/475e514c3140937cf435954f78dedea1861aeab7662d11de232bdaa90655/backports.zoneinfo-0.2.1.tar.gz"
+          hash:
+            value: "d51faaaed4a1d5158dcfcef90355e805"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/pganssle/zoneinfo.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::boto3:1.24.0"
+        purl: "pkg:pypi/boto3@1.24.0"
+        authors:
+        - "Amazon Web Services"
+        declared_licenses:
+        - "Apache License 2.0"
+        - "Apache Software License"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache License 2.0: "Apache-2.0"
+            Apache Software License: "Apache-2.0"
+        description: "The AWS SDK for Python"
+        homepage_url: "https://github.com/boto/boto3"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/42/3f/719c092e618f1312346524eb285416ff4c440cee77d99568c49d3b4722d9/boto3-1.24.0-py3-none-any.whl"
+          hash:
+            value: "a31c05efee2a50439f5b6579a7b959ad"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/b3/39/5c767b5562f7f9dbca7d21f3290d8dc8d12309deb5906777e5f13c0e8377/boto3-1.24.0.tar.gz"
+          hash:
+            value: "c303fc7ec7de9f1cae5739ec3f3f0a99"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/boto/boto3.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::botocore:1.27.0"
+        purl: "pkg:pypi/botocore@1.27.0"
+        authors:
+        - "Amazon Web Services"
+        declared_licenses:
+        - "Apache License 2.0"
+        - "Apache Software License"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache License 2.0: "Apache-2.0"
+            Apache Software License: "Apache-2.0"
+        description: "Low-level, data-driven core of boto 3."
+        homepage_url: "https://github.com/boto/botocore"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/a8/fe/b8bc9ec77d0d8bcc4428b95458db972cc8f8f0a0826e34760195b7e90b00/botocore-1.27.0-py3-none-any.whl"
+          hash:
+            value: "98347074e021552e72d9ebc82ef72407"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/69/99/0d504a248fece3b6dba7d6e836129bbb66f04bd34245f6991e59d3bbdbcd/botocore-1.27.0.tar.gz"
+          hash:
+            value: "1615d2cafb10fe0b356e948ede60eb0a"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/boto/botocore.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::dateparser:1.1.1"
+        purl: "pkg:pypi/dateparser@1.1.1"
+        authors:
+        - "Scrapinghub"
+        declared_licenses:
+        - "BSD"
+        - "BSD License"
+        declared_licenses_processed:
+          spdx_expression: "BSD-3-Clause"
+          mapped:
+            BSD: "BSD-3-Clause"
+            BSD License: "BSD-3-Clause"
+        description: "Date parsing library designed to parse dates from HTML pages"
+        homepage_url: "https://github.com/scrapinghub/dateparser"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/e9/ee/91ad58de5cbd071ecab632a3a5ebea2b39937cf0691b7e1b4afff4a5eb7d/dateparser-1.1.1-py2.py3-none-any.whl"
+          hash:
+            value: "05d7fd2097c99d267375195f193e82a4"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/54/e6/5c1a1fb2ddc1fd1fcc37040df00dbbb2ca53278f232c069658252142d2e2/dateparser-1.1.1.tar.gz"
+          hash:
+            value: "f83c208f129293d3229af25793109377"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/scrapinghub/dateparser.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::jmespath:1.0.0"
+        purl: "pkg:pypi/jmespath@1.0.0"
+        authors:
+        - "James Saryerwinnie"
+        declared_licenses:
+        - "MIT"
+        - "MIT License"
+        declared_licenses_processed:
+          spdx_expression: "MIT"
+          mapped:
+            MIT License: "MIT"
+        description: "JSON Matching Expressions"
+        homepage_url: "https://github.com/jmespath/jmespath.py"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/ca/be/48152dbe2e16b1960fb7987639b2426a0609245041d63a2fa96d1ef88da3/jmespath-1.0.0-py3-none-any.whl"
+          hash:
+            value: "eb9776346d72c2e0fb394f7b7d64dbe4"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/06/7e/44686b986ef9ca6069db224651baaa8300b93af2a085a5b135997bf659b3/jmespath-1.0.0.tar.gz"
+          hash:
+            value: "f005ab4c3128e62735df2908cf84dd1e"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/jmespath/jmespath.py.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::packaging:21.3"
+        purl: "pkg:pypi/packaging@21.3"
+        authors:
+        - "Donald Stufft and individual contributors"
+        declared_licenses:
+        - "Apache Software License"
+        - "BSD License"
+        - "BSD-2-Clause or Apache-2.0"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0 AND (BSD-2-Clause OR Apache-2.0)"
+          mapped:
+            Apache Software License: "Apache-2.0"
+            BSD-2-Clause or Apache-2.0: "BSD-2-Clause OR Apache-2.0"
+            BSD License: "BSD-2-Clause"
+        description: "Core utilities for Python packages"
+        homepage_url: "https://github.com/pypa/packaging"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl"
+          hash:
+            value: "670a7057642064a747bd8274b24eb3f9"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/df/9e/d1a7217f69310c1db8fdf8ab396229f55a699ce34a203691794c5d1cad0c/packaging-21.3.tar.gz"
+          hash:
+            value: "e713c1939f294fd729af4a7be40dd141"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/pypa/packaging.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::pydantic:1.9.1"
+        purl: "pkg:pypi/pydantic@1.9.1"
+        authors:
+        - "Samuel Colvin"
+        declared_licenses:
+        - "MIT"
+        - "MIT License"
+        declared_licenses_processed:
+          spdx_expression: "MIT"
+          mapped:
+            MIT License: "MIT"
+        description: "Data validation and settings management using python type hints"
+        homepage_url: "https://github.com/samuelcolvin/pydantic"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/be/11/a929057bf8742a6362e216e10f6d9caf44bae146a87321b9a18278b6b7d4/pydantic-1.9.1-cp310-cp310-macosx_10_9_x86_64.whl"
+          hash:
+            value: "29907ce2b8230a6a8b60756164f8bdc8"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/d0/a5/e4a25a0becf35530a3d90459a88855743e942f2e502da49ca5b10aa78568/pydantic-1.9.1.tar.gz"
+          hash:
+            value: "8338a8a0a3ac0df1df85766b7c76fa07"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/samuelcolvin/pydantic.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::pyparsing:3.0.9"
+        purl: "pkg:pypi/pyparsing@3.0.9"
+        declared_licenses:
+        - "MIT License"
+        declared_licenses_processed:
+          spdx_expression: "MIT"
+          mapped:
+            MIT License: "MIT"
+        description: "pyparsing module - Classes and methods to define and execute\
+          \ parsing grammars"
+        homepage_url: "None"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/6c/10/a7d0fa5baea8fe7b50f448ab742f26f52b80bfca85ac2be9d35cdd9a3246/pyparsing-3.0.9-py3-none-any.whl"
+          hash:
+            value: "9b7c6d2c436bc7eba41f5f239b391b4c"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/71/22/207523d16464c40a0310d2d4d8926daffa00ac1f5b1576170a32db749636/pyparsing-3.0.9.tar.gz"
+          hash:
+            value: "fadc2f3bf5872bf6310576a86c3566e0"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/pyparsing/pyparsing.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::python-dateutil:2.8.2"
+        purl: "pkg:pypi/python-dateutil@2.8.2"
+        authors:
+        - "Gustavo Niemeyer"
+        declared_licenses:
+        - "Apache Software License"
+        - "BSD License"
+        - "Dual License"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache Software License: "Apache-2.0"
+          unmapped:
+          - "BSD License"
+          - "Dual License"
+        description: "Extensions to the standard Python datetime module"
+        homepage_url: "https://github.com/dateutil/dateutil"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl"
+          hash:
+            value: "95743ca628ad14d4aeb3628907f017bd"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/4c/c4/13b4776ea2d76c115c1d1b84579f3764ee6d57204f6be27119f13a61d0a9/python-dateutil-2.8.2.tar.gz"
+          hash:
+            value: "5970010bb72452344df3d76a10281b65"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/dateutil/dateutil.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::pytz:2022.1"
+        purl: "pkg:pypi/pytz@2022.1"
+        authors:
+        - "Stuart Bishop"
+        declared_licenses:
+        - "MIT"
+        - "MIT License"
+        declared_licenses_processed:
+          spdx_expression: "MIT"
+          mapped:
+            MIT License: "MIT"
+        description: "World timezone definitions, modern and historical"
+        homepage_url: "http://pythonhosted.org/pytz"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl"
+          hash:
+            value: "cb33686362800086a7695e324d0cac60"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/2f/5f/a0f653311adff905bbcaa6d3dfaf97edcf4d26138393c6ccd37a484851fb/pytz-2022.1.tar.gz"
+          hash:
+            value: "2223910fe2e463a01c3102a21acf4f8d"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::pytz-deprecation-shim:0.1.0.post0"
+        purl: "pkg:pypi/pytz-deprecation-shim@0.1.0.post0"
+        authors:
+        - "Paul Ganssle"
+        declared_licenses:
+        - "Apache Software License"
+        - "Apache-2.0"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache Software License: "Apache-2.0"
+        description: "Shims to make deprecation of pytz easier"
+        homepage_url: "https://github.com/pganssle/pytz-deprecation-shim"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl"
+          hash:
+            value: "d311c7fac8e259fb03f41911d50e134e"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/94/f0/909f94fea74759654390a3e1a9e4e185b6cd9aa810e533e3586f39da3097/pytz_deprecation_shim-0.1.0.post0.tar.gz"
+          hash:
+            value: "f563b4bdc56f40acb2498fd1caf6dd1b"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/pganssle/pytz-deprecation-shim.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::regex:2022.3.2"
+        purl: "pkg:pypi/regex@2022.3.2"
+        authors:
+        - "Matthew Barnett"
+        declared_licenses:
+        - "Apache Software License"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache Software License: "Apache-2.0"
+        description: "Alternative regular expression module, to replace re."
+        homepage_url: "https://github.com/mrabarnett/mrab-regex"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/6b/f7/1540c50e80f4bdc0646cdaedbc20841d997950e82fe5a38cf3457b40b20c/regex-2022.3.2-cp310-cp310-macosx_10_9_x86_64.whl"
+          hash:
+            value: "a09b717777cba40088e1ef20d2726a0a"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/4f/17/21e7195da87bcdbdd4ec32fdfdc87ccd5cf97b0a18e0f08ecacbaefca284/regex-2022.3.2.tar.gz"
+          hash:
+            value: "86b60247386d4711e36e3f60b5c8fe83"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/mrabarnett/mrab-regex.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::s3transfer:0.6.0"
+        purl: "pkg:pypi/s3transfer@0.6.0"
+        authors:
+        - "Amazon Web Services"
+        declared_licenses:
+        - "Apache License 2.0"
+        - "Apache Software License"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache License 2.0: "Apache-2.0"
+            Apache Software License: "Apache-2.0"
+        description: "An Amazon S3 Transfer Manager"
+        homepage_url: "https://github.com/boto/s3transfer"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/5e/c6/af903b5fab3f9b5b1e883f49a770066314c6dcceb589cf938d48c89556c1/s3transfer-0.6.0-py3-none-any.whl"
+          hash:
+            value: "a8e4ac6484afa66b26e2cc9f92d908f1"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/e1/eb/e57c93d5cd5edf8c1d124c831ef916601540db70acd96fa21fe60cef1365/s3transfer-0.6.0.tar.gz"
+          hash:
+            value: "17b8acaa7aeb376606637de9e3b3ec1b"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/boto/s3transfer.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::six:1.16.0"
+        purl: "pkg:pypi/six@1.16.0"
+        authors:
+        - "Benjamin Peterson"
+        declared_licenses:
+        - "MIT"
+        - "MIT License"
+        declared_licenses_processed:
+          spdx_expression: "MIT"
+          mapped:
+            MIT License: "MIT"
+        description: "Python 2 and 3 compatibility utilities"
+        homepage_url: "https://github.com/benjaminp/six"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl"
+          hash:
+            value: "529d7fd7e14612ccde86417b4402d6f3"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+          hash:
+            value: "a7c927740e4964dd29b72cebfc1429bb"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/benjaminp/six.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::typing-extensions:4.2.0"
+        purl: "pkg:pypi/typing-extensions@4.2.0"
+        declared_licenses:
+        - "Python Software Foundation License"
+        declared_licenses_processed:
+          spdx_expression: "PSF-2.0"
+          mapped:
+            Python Software Foundation License: "PSF-2.0"
+        description: "Backported and Experimental Type Hints for Python 3.7+"
+        homepage_url: "None"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl"
+          hash:
+            value: "95fc87a08006c5249ae13b8a1c3770b9"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/fe/71/1df93bd59163c8084d812d166c907639646e8aac72886d563851b966bf18/typing_extensions-4.2.0.tar.gz"
+          hash:
+            value: "197fb153e3720a3f6e0c85bb47f9c2b5"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::tzdata:2022.1"
+        purl: "pkg:pypi/tzdata@2022.1"
+        authors:
+        - "Python Software Foundation"
+        declared_licenses:
+        - "Apache Software License"
+        - "Apache-2.0"
+        declared_licenses_processed:
+          spdx_expression: "Apache-2.0"
+          mapped:
+            Apache Software License: "Apache-2.0"
+        description: "Provider of IANA time zone data"
+        homepage_url: "https://github.com/python/tzdata"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/89/2d/49329ebec33b14dae61ecc8c85abe596341832fa36c4bcd3d99fddda018b/tzdata-2022.1-py2.py3-none-any.whl"
+          hash:
+            value: "eea5c83f5efe8aac0581582dfb81607a"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/df/c7/2d8ea31840794fb341bc2c2ea72bf1bd16bd778bd8c0d7c9e1e5f9df1de3/tzdata-2022.1.tar.gz"
+          hash:
+            value: "b458f1ceb9371d9d3051de2fd2c45bb8"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/python/tzdata.git"
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::tzlocal:4.2"
+        purl: "pkg:pypi/tzlocal@4.2"
+        authors:
+        - "Lennart Regebro"
+        declared_licenses:
+        - "MIT"
+        - "MIT License"
+        declared_licenses_processed:
+          spdx_expression: "MIT"
+          mapped:
+            MIT License: "MIT"
+        description: "tzinfo object for the local timezone"
+        homepage_url: "UNKNOWN"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/31/b7/3bc2c1868f27677139b772e4fde95265b93151912fd90eb874827943bfcf/tzlocal-4.2-py3-none-any.whl"
+          hash:
+            value: "b29735d51d8961fa3831484ba38a6f7f"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/7d/b9/164d5f510e0547ae92280d0ca4a90407a15625901afbb9f57a19d9acd9eb/tzlocal-4.2.tar.gz"
+          hash:
+            value: "b20f960e77612ff35c5105bb876f0853"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+      curations: []
+    - package:
+        id: "PyPI::urllib3:1.26.9"
+        purl: "pkg:pypi/urllib3@1.26.9"
+        authors:
+        - "Andrey Petrov"
+        declared_licenses:
+        - "MIT"
+        - "MIT License"
+        declared_licenses_processed:
+          spdx_expression: "MIT"
+          mapped:
+            MIT License: "MIT"
+        description: "HTTP library with thread-safe connection pooling, file post,\
+          \ and more."
+        homepage_url: "https://urllib3.readthedocs.io/"
+        binary_artifact:
+          url: "https://files.pythonhosted.org/packages/ec/03/062e6444ce4baf1eac17a6a0ebfe36bb1ad05e1df0e20b110de59c278498/urllib3-1.26.9-py2.py3-none-any.whl"
+          hash:
+            value: "21785c24a168462568f9a9a0661bcd5a"
+            algorithm: "MD5"
+        source_artifact:
+          url: "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
+          hash:
+            value: "d4b58522821a33c5e421191b83e0dbac"
+            algorithm: "MD5"
+        vcs:
+          type: ""
+          url: ""
+          revision: ""
+          path: ""
+        vcs_processed:
+          type: "Git"
+          url: "https://github.com/urllib3/urllib3.git"
+          revision: ""
+          path: ""
+      curations: []
+    dependency_graphs:
+      Poetry:
+        packages:
+        - "PyPI::backports-zoneinfo:0.2.1"
+        - "PyPI::boto3:1.24.0"
+        - "PyPI::botocore:1.27.0"
+        - "PyPI::dateparser:1.1.1"
+        - "PyPI::jmespath:1.0.0"
+        - "PyPI::packaging:21.3"
+        - "PyPI::pydantic:1.9.1"
+        - "PyPI::pyparsing:3.0.9"
+        - "PyPI::python-dateutil:2.8.2"
+        - "PyPI::pytz-deprecation-shim:0.1.0.post0"
+        - "PyPI::pytz:2022.1"
+        - "PyPI::regex:2022.3.2"
+        - "PyPI::s3transfer:0.6.0"
+        - "PyPI::six:1.16.0"
+        - "PyPI::typing-extensions:4.2.0"
+        - "PyPI::tzdata:2022.1"
+        - "PyPI::tzlocal:4.2"
+        - "PyPI::urllib3:1.26.9"
+        scopes:
+          :requirements-from-poetry.txt::install:
+          - root: 1
+          - root: 3
+          - root: 5
+          - root: 6
+        nodes:
+        - pkg: 4
+        - pkg: 13
+        - pkg: 8
+        - pkg: 17
+        - pkg: 2
+        - pkg: 12
+        - pkg: 1
+        - pkg: 10
+        - pkg: 11
+        - {}
+        - pkg: 15
+        - pkg: 9
+        - pkg: 16
+        - pkg: 3
+        - pkg: 7
+        - pkg: 5
+        - pkg: 14
+        - pkg: 6
+        edges:
+        - from: 2
+          to: 1
+        - from: 4
+          to: 0
+        - from: 4
+          to: 2
+        - from: 4
+          to: 3
+        - from: 5
+          to: 4
+        - from: 6
+          to: 4
+        - from: 6
+          to: 0
+        - from: 6
+          to: 5
+        - from: 11
+          to: 9
+        - from: 11
+          to: 10
+        - from: 12
+          to: 9
+        - from: 12
+          to: 11
+        - from: 13
+          to: 2
+        - from: 13
+          to: 7
+        - from: 13
+          to: 8
+        - from: 13
+          to: 12
+        - from: 15
+          to: 14
+        - from: 17
+          to: 16
+    has_issues: false
+scanner: null
+advisor: null
+evaluator: null

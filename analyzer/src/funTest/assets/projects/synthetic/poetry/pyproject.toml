@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "example"
+version = "1.0.0"
+description = "example project"
+authors = ["author name <author@author.com>"]
+packages = [
+    {include = "example"}
+]
+include = [
+    {path = "example/py.typed"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^1.9.1"
+boto3 = "^1.24.0"
+dateparser = "^1.1.1"
+jmespath = "^1.0.0"
+packaging = "^21.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+mypy = "^0.960"
+xenon = "^0.9.0"
+radon = "^5.1.0"
+pylint = "^2.13.9"
+jsonschema = "^4.5.1"
+types-dateparser = "^1.1.2"
+yapf = "^0.32.0"
+isort = "^5.10.1"
+boto3-stubs = {extras = ["s3"], version = "^1.24.0"}
+pylint-pydantic = "^0.1.4"
+coverage = "^6.4"
+safety = "^1.10.3"
+types-jmespath = "^0.10.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+python_files = [
+    "unittest_*.py",
+    "functest_*.py"
+]
+filterwarnings = [
+    "ignore:The localize method is no longer necessary, as this time zone supports the fold attribute"
+]
+
+[tool.mypy]
+warn_unreachable = true
+plugins = [
+    "pydantic.mypy"
+]
+
+[tool.pydantic-mypy]
+warn_untyped_fields = true
+
+[[tool.mypy.overrides]]
+module = "table_lookup_engine.*"
+disallow_untyped_defs = true
+
+[tool.isort]
+include_trailing_comma = true
+line_length = 100
+multi_line_output = 3
+
+[tool.yapf]
+allow_multiline_dictionary_keys = true
+allow_split_before_dict_value = false
+blank_line_before_nested_class_or_def = false
+column_limit = 100
+dedent_closing_brackets = true
+split_arguments_when_comma_terminated = true
+split_before_arithmetic_operator = false
+split_before_bitwise_operator = false
+split_before_dot = true
+split_before_logical_operator = false
+split_before_named_assigns = false
