@@ -49,15 +49,16 @@ FROM eclipse-temurin:11-jdk-focal AS run
 ENV \
     # Package manager versions.
     BOWER_VERSION=1.8.12 \
-    CARGO_VERSION=0.58.0-0ubuntu1~20.04.1 \
+    CARGO_VERSION=0.60.0ubuntu1-0ubuntu1~20.04.1 \
     COCOAPODS_VERSION=1.11.2 \
     COMPOSER_VERSION=1.10.1-1 \
     CONAN_VERSION=1.48.1 \
     GO_DEP_VERSION=0.5.4 \
-    GO_VERSION=1.16.5 \
+    GO_VERSION=1.18.3 \
     HASKELL_STACK_VERSION=2.1.3 \
     NPM_VERSION=8.5.0 \
     PYTHON_PIPENV_VERSION=2018.11.26 \
+    PYTHON_POETRY_VERSION=1.1.13 \
     PYTHON_VIRTUALENV_VERSION=15.1.0 \
     SBT_VERSION=1.6.1 \
     YARN_VERSION=1.22.10 \
@@ -129,7 +130,7 @@ RUN /opt/ort/bin/import_proxy_certs.sh && \
     # Install package managers (in versions known to work).
     npm install --global npm@$NPM_VERSION bower@$BOWER_VERSION yarn@$YARN_VERSION && \
     pip install --no-cache-dir wheel && \
-    pip install --no-cache-dir conan==$CONAN_VERSION pipenv==$PYTHON_PIPENV_VERSION virtualenv==$PYTHON_VIRTUALENV_VERSION && \
+    pip install --no-cache-dir conan==$CONAN_VERSION poetry==$PYTHON_POETRY_VERSION pipenv==$PYTHON_PIPENV_VERSION virtualenv==$PYTHON_VIRTUALENV_VERSION && \
     # Install golang in order to have `go mod` as package manager.
     curl -ksSO https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz && \
     tar -C /opt -xzf go$GO_VERSION.linux-amd64.tar.gz && \
